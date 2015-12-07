@@ -7,9 +7,11 @@
 //============================================================================
 
 #include <iostream>
+#include "UAVFactory.h"
+
 using namespace std;
 
-int main()
+int main(int argc, const char * argv[])
 {
 	cout << "!!!Hello World!!! Can You see me? - ANT" << endl; // prints !!!Hello World!!!
 	return 0;
