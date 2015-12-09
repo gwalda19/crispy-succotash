@@ -13,8 +13,8 @@ class SupplyController
 {
 public:
     
-    void SupplyController();
-    void ~SupplyController();
+    SupplyController();
+    ~SupplyController();
     
     void dropSupply();
 };

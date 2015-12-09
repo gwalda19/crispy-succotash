@@ -8,11 +8,11 @@
 
 #include "CombatController.h"
 
-void CombatController::CombatController()
+CombatController::CombatController()
 {
 }
 
-void CombatController::~CombatController()
+CombatController::~CombatController()
 {
 }
 

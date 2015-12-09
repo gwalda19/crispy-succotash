@@ -8,11 +8,11 @@
 
 #include "SupplyController.h"
 
-void SupplyController::SupplyController()
+SupplyController::SupplyController()
 {
 }
 
-void SupplyController::~SupplyController()
+SupplyController::~SupplyController()
 {
 }
 

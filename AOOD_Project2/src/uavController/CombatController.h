@@ -13,8 +13,8 @@ class CombatController
 {
 public:
     
-    void CombatController();
-    void ~CombatController();
+    CombatController();
+    ~CombatController();
     
     void fireMissile();
     void fireGuns();

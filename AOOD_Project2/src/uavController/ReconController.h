@@ -13,8 +13,8 @@ class ReconController
 {
 public:
     
-    void ReconController();
-    void ~ReconController();
+    ReconController();
+    ~ReconController();
     
     void takePicture();
     void transmitPicture();

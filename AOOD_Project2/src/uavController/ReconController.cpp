@@ -8,11 +8,11 @@
 
 #include "ReconController.h"
 
-void ReconController::ReconController()
+ReconController::ReconController()
 {
 }
 
-void ReconController::~ReconController()
+ReconController::~ReconController()
 {
 }
 
