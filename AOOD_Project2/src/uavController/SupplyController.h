@@ -9,14 +9,22 @@
 #ifndef SupplyController_H
 #define SupplyController_H
 
-class SupplyController
+#include "automaticDutiesProvider.h"
+
+class SupplyController : public automaticDutiesProvider
 {
 public:
 
-    SupplyController();
+    SupplyController( automaticDutiesProvider* next_duty_provider );
     ~SupplyController();
 
     void dropSupply();
+
+    virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type );
+
+private:
+
+    automaticDutiesProvider* next_duty_provider;
 };
 
 #endif /* SuppplyController_h */
