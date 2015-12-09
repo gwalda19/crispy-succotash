@@ -6,16 +6,16 @@
 //  09DEC15
 //
 
-#ifndef SupplyController
-#define SupplyController
+#ifndef SupplyController_H
+#define SupplyController_H
 
 class SupplyController
 {
 public:
-    
+
     SupplyController();
     ~SupplyController();
-    
+
     void dropSupply();
 };
 

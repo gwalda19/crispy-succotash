@@ -15,20 +15,20 @@
 class SupplyFactory : public UAVFactory
 {
 public:
-    
+
     //Inherited
     void flightControls();
     void createSensors();
     void updatePosition();
     void returnToBase();
     void toggleVisionCamera();
-    
+
     //Local
     virtual void toggleBayDoors();
     virtual void releasePackage();
-    
+
 private:
-    
+
 };
 
 #endif /* SupplyFactory_h */

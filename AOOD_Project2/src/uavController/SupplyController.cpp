@@ -7,6 +7,7 @@
 //
 
 #include "SupplyController.h"
+#include "uavLogger.h"
 
 SupplyController::SupplyController()
 {
@@ -18,5 +19,5 @@ SupplyController::~SupplyController()
 
 void SupplyController::dropSupply()
 {
-    cout << "Supply is being dropped" << endl;
+  uavLogger::getInstance()->log("Supply is being dropped");
 }

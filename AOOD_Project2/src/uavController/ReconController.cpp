@@ -7,6 +7,7 @@
 //
 
 #include "ReconController.h"
+#include "uavLogger.h"
 
 ReconController::ReconController()
 {
@@ -18,10 +19,10 @@ ReconController::~ReconController()
 
 void ReconController::takePicture()
 {
-    cout << "Taking picture" << endl;
+  uavLogger::getInstance()->log("Taking picture");
 }
 
 void ReconController::transmitPicture()
 {
-    cout << "Picture is being transmitted" << endl;
+  uavLogger::getInstance()->log("Picture is being transmitted");
 }

@@ -7,6 +7,7 @@
 //
 
 #include "CombatController.h"
+#include "uavLogger.h"
 
 CombatController::CombatController()
 {
@@ -18,10 +19,10 @@ CombatController::~CombatController()
 
 void CombatController::fireMissile()
 {
-    cout << "Misile is being fired" << endl;
+  uavLogger::getInstance()->log("Missile is being fired");
 }
 
 void CombatController::fireGuns()
 {
-    cout << "Guns activated at given target" << endl;
+  uavLogger::getInstance()->log("Guns activated at given target");
 }

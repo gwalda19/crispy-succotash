@@ -12,6 +12,7 @@
 class UAVFactory
 {
 public:
+    virtual ~UAVFactory() {}
     virtual void flightControls()     = 0;
     virtual void createSensors()      = 0;
     virtual void updatePosition()     = 0;

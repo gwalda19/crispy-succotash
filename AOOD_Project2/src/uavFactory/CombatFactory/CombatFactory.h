@@ -10,7 +10,7 @@
 #define CombatFactory_h
 
 #include <stdio.h>
-#include "uavFactory.h"
+#include "UAVFactory.h"
 
 class CombatFactory : public UAVFactory
 {
@@ -21,14 +21,14 @@ public:
     void updatePosition();
     void returnToBase();
     void toggleVisionCamera();
-    
+
     //Local
     virtual void acquireTargetLock();
     virtual void fireMissile();
     virtual void dropBomb();
-    
+
 private:
-    
+
 };
 
 #endif /* CombatFactory_h */
