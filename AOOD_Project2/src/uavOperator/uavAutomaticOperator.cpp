@@ -6,15 +6,30 @@
  */
 
 #include "uavAutomaticOperator.h"
+#include "automaticDutiesProvider.h"
+#include "uavLogger.h"
 
-uavAutomaticOperator::uavAutomaticOperator ()
+uavAutomaticOperator::uavAutomaticOperator()
 {
-  // TODO Auto-generated constructor stub
 
 }
 
-uavAutomaticOperator::~uavAutomaticOperator ()
+uavAutomaticOperator::~uavAutomaticOperator()
 {
-  // TODO Auto-generated destructor stub
+
 }
 
+void uavAutomaticOperator::initialize( automaticDutiesProvider* duties_provider )
+{
+  this->duties_provider = duties_provider;
+}
+
+void uavAutomaticOperator::update()
+{
+  uavLogger::getInstance()->log( "Performing Automatic Operator Update");
+
+  duties_provider->performMissionDuty( uavMissionModes::COMBAT_MISSION );
+  duties_provider->performMissionDuty( uavMissionModes::RECON_MISSION );
+  duties_provider->performMissionDuty( uavMissionModes::SUPPLY_MISSION );
+  duties_provider->performMissionDuty( uavMissionModes::NO_MISSION );
+}
