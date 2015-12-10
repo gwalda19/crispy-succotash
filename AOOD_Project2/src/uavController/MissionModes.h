@@ -6,6 +6,9 @@
 //  08DEC15
 //
 
+#ifndef uavMissionModes_h
+#define uavMissionModes_h
+
 namespace uavMissionModes
 {
     enum uavMissionTypesEnum
@@ -14,12 +17,14 @@ namespace uavMissionModes
         RECON_MISSION,
         COMBAT_MISSION,
         SUPPLY_MISSION
-    }uavMissionTypes;
-    
+    };
+
     enum uavStateEnum
     {
         NO_STATE = -1,
         AUTO,
         USER
-    }UAVSTATE;
-}
+    };
+};
+
+#endif

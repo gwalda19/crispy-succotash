@@ -15,7 +15,7 @@ class SupplyController : public automaticDutiesProvider
 {
 public:
 
-    SupplyController( automaticDutiesProvider* next_duty_provider );
+    SupplyController();
     ~SupplyController();
 
     void dropSupply();
@@ -24,7 +24,6 @@ public:
 
 private:
 
-    automaticDutiesProvider* next_duty_provider;
 };
 
 #endif /* SuppplyController_h */

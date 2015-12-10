@@ -9,15 +9,23 @@
 #ifndef CombatController_h
 #define CombatController_h
 
-class CombatController
+#include "automaticDutiesProvider.h"
+
+class CombatController : public automaticDutiesProvider
 {
 public:
-    
-    CombatController();
+
+    CombatController( automaticDutiesProvider* next_duty_provider );
     ~CombatController();
-    
+
     void fireMissile();
     void fireGuns();
+
+    virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type );
+
+private:
+
+    automaticDutiesProvider* next_duty_provider;
 };
 
 #endif /* CombatController_h */

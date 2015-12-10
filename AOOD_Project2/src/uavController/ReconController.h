@@ -9,17 +9,22 @@
 #ifndef ReconController_h
 #define ReconController_h
 
-class ReconController
+#include "automaticDutiesProvider.h"
+
+class ReconController : public automaticDutiesProvider
 {
 public:
-    
-    ReconController();
+
+    ReconController( automaticDutiesProvider* next_duty_provider );
     ~ReconController();
-    
+
     void takePicture();
     void transmitPicture();
-    
+
+    virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type );
+
 private:
-    
+
+    automaticDutiesProvider* next_duty_provider;
 };
 #endif /* ReconController_h */

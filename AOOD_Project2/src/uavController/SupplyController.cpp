@@ -9,11 +9,8 @@
 #include "SupplyController.h"
 #include "uavLogger.h"
 
-
-
-SupplyController::SupplyController( automaticDutiesProvider* next_duty_provider )
+SupplyController::SupplyController()
 {
-  this->next_duty_provider = next_duty_provider;
 }
 
 SupplyController::~SupplyController()
@@ -28,7 +25,7 @@ void SupplyController::dropSupply()
 void SupplyController::performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type )
 {
   if( mission_type == uavMissionModes::SUPPLY_MISSION )
-	uavLogger::getInstance()->log("Perform the automatic supply mission");
+    uavLogger::getInstance()->log("Perform the automatic supply mission");
   else
-	next_duty_provider->performMissionDuty( mission_type );
+    uavLogger::getInstance()->log("Unhandled Mission Type.");
 }
