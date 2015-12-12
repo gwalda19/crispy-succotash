@@ -70,17 +70,17 @@ void uavUserOperator::fireGun()
 
 void uavUserOperator::dropBomb()
 {
-  //combat_controller->dropBomb();
+  combat_controller->dropBombs();
 }
 
 void uavUserOperator::lockTarget()
 {
-  //combat_controller->lockTarget();
+  combat_controller->lockOnTarget();
 }
 
 void uavUserOperator::breakEngage()
 {
-  //combat_controller->breakEngage();
+  combat_controller->breakEngage();
 }
 
 void uavUserOperator::takePicture()

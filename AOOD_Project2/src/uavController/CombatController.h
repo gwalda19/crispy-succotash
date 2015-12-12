@@ -20,6 +20,9 @@ public:
 
     void fireMissile();
     void fireGuns();
+    void dropBombs();
+    void lockOnTarget();
+    void breakEngage();
 
     virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type );
 

@@ -28,6 +28,25 @@ void CombatController::fireGuns()
   uavLogger::getInstance()->log("Guns activated at given target");
 }
 
+void CombatController::dropBombs()
+{
+  uavLogger::getInstance()->log("Bay Doors are Opening");
+  //wait 2 secs
+  uavLogger::getInstance()->log("Bombs Being Released!");
+  //wait 2 secs
+  uavLogger::getInstance()->log("Bay Doors are Closing");
+}
+
+void CombatController::lockOnTarget()
+{
+  uavLogger::getInstance()->log("Target Locked On");
+}
+
+void CombatController::breakEngage()
+{
+  uavLogger::getInstance()->log("Engagement Broken");
+}
+
 void CombatController::performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type )
 {
   if( mission_type == uavMissionModes::COMBAT_MISSION )
