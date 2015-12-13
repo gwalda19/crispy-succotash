@@ -10,6 +10,7 @@
 
 #include "userButtonActions.h"
 
+class uavFactory;
 class SupplyController;
 class ReconController;
 class CombatController;
@@ -18,13 +19,9 @@ class uavUserOperator : public userButtonActions
 {
   public:
 
-    uavUserOperator();
+    uavUserOperator( uavFactory* uav_factory );
 
     virtual ~uavUserOperator();
-
-    void initialize( SupplyController* supply_controller,
-                     ReconController* recon_controller,
-                     CombatController* combat_controller );
 
     void update();
 
@@ -42,7 +39,7 @@ class uavUserOperator : public userButtonActions
   private:
 
     SupplyController* supply_controller;
-    ReconController* recon_controller;
+    ReconController*  recon_controller;
     CombatController* combat_controller;
 };
 

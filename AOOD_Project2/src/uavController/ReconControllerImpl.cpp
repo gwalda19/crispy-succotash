@@ -6,29 +6,29 @@
 //  08DEC15
 //
 
-#include "ReconController.h"
+#include "ReconControllerImpl.h"
 #include "uavLogger.h"
 
-ReconController::ReconController( automaticDutiesProvider* next_duty_provider )
+ReconControllerImpl::ReconControllerImpl( automaticDutiesProvider* next_duty_provider )
 {
   this->next_duty_provider = next_duty_provider;
 }
 
-ReconController::~ReconController()
+ReconControllerImpl::~ReconControllerImpl()
 {
 }
 
-void ReconController::takePicture()
+void ReconControllerImpl::takePicture()
 {
   uavLogger::getInstance()->log( "Taking picture" );
 }
 
-void ReconController::transmitPicture()
+void ReconControllerImpl::transmitPicture()
 {
   uavLogger::getInstance()->log( "Picture is being transmitted" );
 }
 
-void ReconController::performMissionDuty(
+void ReconControllerImpl::performMissionDuty(
                    uavMissionModes::uavMissionTypesEnum mission_type )
 {
   if( mission_type == uavMissionModes::RECON_MISSION )

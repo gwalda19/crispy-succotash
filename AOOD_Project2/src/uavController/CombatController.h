@@ -1,36 +1,25 @@
-//
-//  CombatController.h
-//  Group2_Final_Project2
-//
-//  Created by Group 2
-//  09DEC15
-//
+/*
+ * CombatController.h
+ *
+ *  Created on: Dec 13, 2015
+ *      Author: David
+ */
 
-#ifndef CombatController_h
-#define CombatController_h
+#ifndef COMBATCONTROLLER_H_
+#define COMBATCONTROLLER_H_
 
-#include "automaticDutiesProvider.h"
 
-class CombatController : public automaticDutiesProvider
+class CombatController
 {
   public:
 
-    CombatController( automaticDutiesProvider* next_duty_provider );
+    virtual ~CombatController() {}
 
-    virtual ~CombatController();
-
-    void fireMissile();
-    void fireGuns();
-    void dropBombs();
-    void lockOnTarget();
-    void breakEngage();
-
-    virtual void performMissionDuty(
-                   uavMissionModes::uavMissionTypesEnum mission_type );
-
-  private:
-
-    automaticDutiesProvider* next_duty_provider;
+    virtual void fireMissile() = 0;
+    virtual void fireGuns() = 0;
+    virtual void dropBombs() = 0;
+    virtual void lockOnTarget() = 0;
+    virtual void breakEngage() = 0;
 };
 
-#endif /* CombatController_h */
+#endif /* COMBATCONTROLLER_H_ */

@@ -1,32 +1,22 @@
-//
-//  ReconController.h
-//  Group2_Final_Project2
-//
-//  Created by Group 2
-//  08DEC15
-//
+/*
+ * ReconController.h
+ *
+ *  Created on: Dec 13, 2015
+ *      Author: David
+ */
 
-#ifndef ReconController_h
-#define ReconController_h
+#ifndef RECONCONTROLLER_H_
+#define RECONCONTROLLER_H_
 
-#include "automaticDutiesProvider.h"
 
-class ReconController : public automaticDutiesProvider
+class ReconController
 {
   public:
 
-    ReconController( automaticDutiesProvider* next_duty_provider );
+    virtual ~ReconController() {}
 
-    virtual ~ReconController();
-
-    void takePicture();
-    void transmitPicture();
-
-    virtual void performMissionDuty(
-                   uavMissionModes::uavMissionTypesEnum mission_type );
-
-  private:
-
-    automaticDutiesProvider* next_duty_provider;
+    virtual void takePicture() = 0;
+    virtual void transmitPicture() = 0;
 };
-#endif /* ReconController_h */
+
+#endif /* RECONCONTROLLER_H_ */

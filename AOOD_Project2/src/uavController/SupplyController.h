@@ -1,31 +1,21 @@
-//
-//  SupplyController.h
-//  Group2_Final_Project2
-//
-//  Created by Group 2
-//  09DEC15
-//
+/*
+ * SupplyController.h
+ *
+ *  Created on: Dec 13, 2015
+ *      Author: David
+ */
 
-#ifndef SupplyController_H
-#define SupplyController_H
+#ifndef SUPPLYCONTROLLER_H_
+#define SUPPLYCONTROLLER_H_
 
-#include "automaticDutiesProvider.h"
 
-class SupplyController : public automaticDutiesProvider
+class SupplyController
 {
   public:
 
-    SupplyController();
+    virtual ~SupplyController() {}
 
-    virtual ~SupplyController();
-
-    void dropSupply();
-
-    virtual void performMissionDuty(
-                   uavMissionModes::uavMissionTypesEnum mission_type );
-
-  private:
-
+    virtual void dropSupply() = 0;
 };
 
-#endif /* SuppplyController_h */
+#endif /* SUPPLYCONTROLLER_H_ */

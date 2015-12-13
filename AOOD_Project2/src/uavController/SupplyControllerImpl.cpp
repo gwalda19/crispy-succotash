@@ -6,23 +6,23 @@
 //  09DEC15
 //
 
-#include "SupplyController.h"
+#include "SupplyControllerImpl.h"
 #include "uavLogger.h"
 
-SupplyController::SupplyController()
+SupplyControllerImpl::SupplyControllerImpl()
 {
 }
 
-SupplyController::~SupplyController()
+SupplyControllerImpl::~SupplyControllerImpl()
 {
 }
 
-void SupplyController::dropSupply()
+void SupplyControllerImpl::dropSupply()
 {
   uavLogger::getInstance()->log( "Supply is being dropped" );
 }
 
-void SupplyController::performMissionDuty(
+void SupplyControllerImpl::performMissionDuty(
                    uavMissionModes::uavMissionTypesEnum mission_type )
 {
   if( mission_type == uavMissionModes::SUPPLY_MISSION )

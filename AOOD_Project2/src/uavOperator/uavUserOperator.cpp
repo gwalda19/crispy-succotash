@@ -6,27 +6,23 @@
  */
 
 #include "uavUserOperator.h"
+#include "uavFactory.h"
 #include "SupplyController.h"
 #include "ReconController.h"
 #include "CombatController.h"
+#include "MissionModes.h"
 #include "uavLogger.h"
 
-uavUserOperator::uavUserOperator()
+uavUserOperator::uavUserOperator( uavFactory* uav_factory )
 {
-
+  supply_controller = uav_factory->getSupplyController();
+  recon_controller  = uav_factory->getReconController();
+  combat_controller = uav_factory->getCombatController();
 }
 
 uavUserOperator::~uavUserOperator()
 {
 
-}
-
-void uavUserOperator::initialize( SupplyController* supply_controller,
-    ReconController* recon_controller, CombatController* combat_controller )
-{
-  this->supply_controller = supply_controller;
-  this->recon_controller = recon_controller;
-  this->combat_controller = combat_controller;
 }
 
 void uavUserOperator::update()

@@ -6,30 +6,30 @@
 //  09DEC15
 //
 
-#include "CombatController.h"
+#include "CombatControllerImpl.h"
 #include "uavLogger.h"
 
-CombatController::CombatController(
+CombatControllerImpl::CombatControllerImpl(
                    automaticDutiesProvider* next_duty_provider )
 {
   this->next_duty_provider = next_duty_provider;
 }
 
-CombatController::~CombatController()
+CombatControllerImpl::~CombatControllerImpl()
 {
 }
 
-void CombatController::fireMissile()
+void CombatControllerImpl::fireMissile()
 {
   uavLogger::getInstance()->log( "Missile is being fired" );
 }
 
-void CombatController::fireGuns()
+void CombatControllerImpl::fireGuns()
 {
   uavLogger::getInstance()->log( "Guns activated at given target" );
 }
 
-void CombatController::dropBombs()
+void CombatControllerImpl::dropBombs()
 {
   uavLogger::getInstance()->log( "Bay Doors are Opening" );
   //wait 2 secs
@@ -38,17 +38,17 @@ void CombatController::dropBombs()
   uavLogger::getInstance()->log( "Bay Doors are Closing" );
 }
 
-void CombatController::lockOnTarget()
+void CombatControllerImpl::lockOnTarget()
 {
   uavLogger::getInstance()->log( "Target Locked On" );
 }
 
-void CombatController::breakEngage()
+void CombatControllerImpl::breakEngage()
 {
   uavLogger::getInstance()->log( "Engagement Broken" );
 }
 
-void CombatController::performMissionDuty(
+void CombatControllerImpl::performMissionDuty(
                    uavMissionModes::uavMissionTypesEnum mission_type )
 {
   if( mission_type == uavMissionModes::COMBAT_MISSION )
