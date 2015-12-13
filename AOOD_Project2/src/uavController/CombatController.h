@@ -13,10 +13,11 @@
 
 class CombatController : public automaticDutiesProvider
 {
-public:
+  public:
 
     CombatController( automaticDutiesProvider* next_duty_provider );
-    ~CombatController();
+
+    virtual ~CombatController();
 
     void fireMissile();
     void fireGuns();
@@ -24,9 +25,10 @@ public:
     void lockOnTarget();
     void breakEngage();
 
-    virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type );
+    virtual void performMissionDuty(
+                   uavMissionModes::uavMissionTypesEnum mission_type );
 
-private:
+  private:
 
     automaticDutiesProvider* next_duty_provider;
 };

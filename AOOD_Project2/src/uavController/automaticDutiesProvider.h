@@ -14,9 +14,10 @@ class automaticDutiesProvider
 {
   public:
 
-  virtual ~automaticDutiesProvider() {}
+    virtual ~automaticDutiesProvider() {}
 
-  virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type ) = 0;
+    virtual void performMissionDuty(
+                   uavMissionModes::uavMissionTypesEnum mission_type ) = 0;
 };
 
 #endif /* AUTOMATICDUTIESPROVIDER_H_ */

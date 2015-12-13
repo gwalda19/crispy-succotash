@@ -12,18 +12,19 @@ class automaticDutiesProvider;
 
 class uavAutomaticOperator
 {
-public:
-  uavAutomaticOperator();
+  public:
 
-  virtual ~uavAutomaticOperator();
+    uavAutomaticOperator();
 
-  void initialize( automaticDutiesProvider* duties_provider );
+    virtual ~uavAutomaticOperator();
 
-  void update();
+    void initialize( automaticDutiesProvider* duties_provider );
 
-private:
+    void update();
 
-  automaticDutiesProvider* duties_provider;
+  private:
+
+    automaticDutiesProvider* duties_provider;
 };
 
 #endif /* UAVAUTOMATICOPERATOR_H_ */

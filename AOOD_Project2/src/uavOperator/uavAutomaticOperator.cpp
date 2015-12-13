@@ -19,14 +19,15 @@ uavAutomaticOperator::~uavAutomaticOperator()
 
 }
 
-void uavAutomaticOperator::initialize( automaticDutiesProvider* duties_provider )
+void uavAutomaticOperator::initialize(
+                   automaticDutiesProvider* duties_provider )
 {
   this->duties_provider = duties_provider;
 }
 
 void uavAutomaticOperator::update()
 {
-  uavLogger::getInstance()->log( "Performing Automatic Operator Update");
+  uavLogger::getInstance()->log( "Performing Automatic Operator Update" );
 
   duties_provider->performMissionDuty( uavMissionModes::COMBAT_MISSION );
   duties_provider->performMissionDuty( uavMissionModes::RECON_MISSION );

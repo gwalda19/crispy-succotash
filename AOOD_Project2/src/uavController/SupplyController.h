@@ -13,16 +13,18 @@
 
 class SupplyController : public automaticDutiesProvider
 {
-public:
+  public:
 
     SupplyController();
-    ~SupplyController();
+
+    virtual ~SupplyController();
 
     void dropSupply();
 
-    virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type );
+    virtual void performMissionDuty(
+                   uavMissionModes::uavMissionTypesEnum mission_type );
 
-private:
+  private:
 
 };
 

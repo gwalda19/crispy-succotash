@@ -13,17 +13,19 @@
 
 class ReconController : public automaticDutiesProvider
 {
-public:
+  public:
 
     ReconController( automaticDutiesProvider* next_duty_provider );
-    ~ReconController();
+
+    virtual ~ReconController();
 
     void takePicture();
     void transmitPicture();
 
-    virtual void performMissionDuty( uavMissionModes::uavMissionTypesEnum mission_type );
+    virtual void performMissionDuty(
+                   uavMissionModes::uavMissionTypesEnum mission_type );
 
-private:
+  private:
 
     automaticDutiesProvider* next_duty_provider;
 };

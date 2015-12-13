@@ -14,37 +14,36 @@ class SupplyController;
 class ReconController;
 class CombatController;
 
-
 class uavUserOperator : public userButtonActions
 {
-public:
+  public:
 
-  uavUserOperator();
+    uavUserOperator();
 
-  virtual ~uavUserOperator();
+    virtual ~uavUserOperator();
 
-  void initialize( SupplyController* supply_controller,
-                   ReconController*  recon_controller,
-                   CombatController* combat_controller );
+    void initialize( SupplyController* supply_controller,
+                     ReconController* recon_controller,
+                     CombatController* combat_controller );
 
-  void update();
+    void update();
 
-  virtual void fireMissile();
-  virtual void fireGun();
-  virtual void dropBomb();
-  virtual void lockTarget();
-  virtual void breakEngage();
+    virtual void fireMissile();
+    virtual void fireGun();
+    virtual void dropBomb();
+    virtual void lockTarget();
+    virtual void breakEngage();
 
-  virtual void takePicture();
-  virtual void transmitPictures();
+    virtual void takePicture();
+    virtual void transmitPictures();
 
-  virtual void dropSupplies();
+    virtual void dropSupplies();
 
-private:
+  private:
 
-  SupplyController* supply_controller;
-  ReconController*  recon_controller;
-  CombatController* combat_controller;
+    SupplyController* supply_controller;
+    ReconController* recon_controller;
+    CombatController* combat_controller;
 };
 
 #endif /* UAVUSEROPERATOR_H_ */

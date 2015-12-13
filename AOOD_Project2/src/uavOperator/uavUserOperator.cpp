@@ -11,7 +11,6 @@
 #include "CombatController.h"
 #include "uavLogger.h"
 
-
 uavUserOperator::uavUserOperator()
 {
 
@@ -22,13 +21,11 @@ uavUserOperator::~uavUserOperator()
 
 }
 
-void uavUserOperator::initialize(
-                   SupplyController* supply_controller,
-                   ReconController*  recon_controller,
-                   CombatController* combat_controller )
+void uavUserOperator::initialize( SupplyController* supply_controller,
+    ReconController* recon_controller, CombatController* combat_controller )
 {
   this->supply_controller = supply_controller;
-  this->recon_controller  = recon_controller;
+  this->recon_controller = recon_controller;
   this->combat_controller = combat_controller;
 }
 
@@ -41,19 +38,19 @@ void uavUserOperator::update()
   switch( mission )
   {
     case uavMissionModes::COMBAT_MISSION:
-      uavLogger::getInstance()->log( "Do user combat functionality");
+      uavLogger::getInstance()->log( "Do user combat functionality" );
       break;
 
     case uavMissionModes::RECON_MISSION:
-      uavLogger::getInstance()->log( "Do user recon functionality");
+      uavLogger::getInstance()->log( "Do user recon functionality" );
       break;
 
     case uavMissionModes::SUPPLY_MISSION:
-      uavLogger::getInstance()->log( "Do user supply functionality");
+      uavLogger::getInstance()->log( "Do user supply functionality" );
       break;
 
     default:
-      uavLogger::getInstance()->log( "UAV is not on a mission");
+      uavLogger::getInstance()->log( "UAV is not on a mission" );
       break;
   }
 }

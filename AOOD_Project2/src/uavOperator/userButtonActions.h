@@ -11,20 +11,20 @@
 
 class userButtonActions
 {
-public:
+  public:
 
-  virtual ~userButtonActions() {}
+    virtual ~userButtonActions() {}
 
-  virtual void fireMissile() = 0;
-  virtual void fireGun() = 0;
-  virtual void dropBomb() = 0;
-  virtual void lockTarget() = 0;
-  virtual void breakEngage() = 0;
+    virtual void fireMissile() = 0;
+    virtual void fireGun() = 0;
+    virtual void dropBomb() = 0;
+    virtual void lockTarget() = 0;
+    virtual void breakEngage() = 0;
 
-  virtual void takePicture() = 0;
-  virtual void transmitPictures() = 0;
+    virtual void takePicture() = 0;
+    virtual void transmitPictures() = 0;
 
-  virtual void dropSupplies() = 0;
+    virtual void dropSupplies() = 0;
 };
 
 
