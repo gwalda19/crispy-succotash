@@ -14,9 +14,6 @@
 #include "uavFactoryImpl.h"
 #include "uavLogger.h"
 
-#include <iostream>
-using namespace std;
-
 int main(int argc, const char * argv[])
 {
   uavLogger::getInstance()->log( "!!!Hello World!!! Can You see me?");
