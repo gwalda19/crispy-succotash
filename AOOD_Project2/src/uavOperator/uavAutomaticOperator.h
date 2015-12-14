@@ -10,12 +10,15 @@
 
 class automaticDutiesProvider;
 
+///-----------------------------------------
+///  This class handles the automatic operations
+///  of the UAV.
+///-----------------------------------------
 class uavAutomaticOperator
 {
   public:
 
     uavAutomaticOperator();
-
     virtual ~uavAutomaticOperator();
 
     void initialize( automaticDutiesProvider* duties_provider );

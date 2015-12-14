@@ -15,12 +15,17 @@ class SupplyController;
 class ReconController;
 class CombatController;
 
+///-----------------------------------------
+///  This class handles the user operations
+///  of the UAV. It implements the userButtonActions
+///  interface so that the GUI knows what buttons
+///  actions can be done.
+///-----------------------------------------
 class uavUserOperator : public userButtonActions
 {
   public:
 
     uavUserOperator( uavFactory* uav_factory );
-
     virtual ~uavUserOperator();
 
     void update();
