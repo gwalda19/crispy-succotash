@@ -6,8 +6,8 @@
  */
 
 #include "uavAutomaticOperator.h"
-#include "automaticDutiesProvider.h"
-#include "uavLogger.h"
+#include "../uavController/automaticDutiesProvider.h"
+#include "../uavLogger/uavLogger.h"
 
 uavAutomaticOperator::uavAutomaticOperator()
 {

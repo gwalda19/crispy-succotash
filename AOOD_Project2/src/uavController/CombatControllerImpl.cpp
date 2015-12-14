@@ -7,7 +7,7 @@
 //
 
 #include "CombatControllerImpl.h"
-#include "uavLogger.h"
+#include "../uavLogger/uavLogger.h"
 
 CombatControllerImpl::CombatControllerImpl(
                    automaticDutiesProvider* next_duty_provider )

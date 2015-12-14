@@ -7,7 +7,7 @@
 //
 
 #include "SupplyControllerImpl.h"
-#include "uavLogger.h"
+#include "../uavLogger/uavLogger.h"
 
 SupplyControllerImpl::SupplyControllerImpl()
 {

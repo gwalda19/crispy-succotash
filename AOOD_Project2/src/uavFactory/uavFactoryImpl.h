@@ -9,9 +9,9 @@
 #define UAVFACTORYIMPL_H_
 
 #include "uavFactory.h"
-#include "SupplyControllerImpl.h"
-#include "ReconControllerImpl.h"
-#include "CombatControllerImpl.h"
+#include "../uavController/SupplyControllerImpl.h"
+#include "../uavController/ReconControllerImpl.h"
+#include "../uavController/CombatControllerImpl.h"
 
 class automaticDutiesProvider;
 

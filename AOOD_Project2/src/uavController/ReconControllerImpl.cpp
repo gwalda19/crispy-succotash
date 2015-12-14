@@ -7,7 +7,7 @@
 //
 
 #include "ReconControllerImpl.h"
-#include "uavLogger.h"
+#include "../uavLogger/uavLogger.h"
 
 ReconControllerImpl::ReconControllerImpl( automaticDutiesProvider* next_duty_provider )
 {

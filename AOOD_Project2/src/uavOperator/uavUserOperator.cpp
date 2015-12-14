@@ -5,13 +5,13 @@
  *      Author: dgwalthney
  */
 
-#include "uavUserOperator.h"
-#include "uavFactory.h"
-#include "SupplyController.h"
-#include "ReconController.h"
-#include "CombatController.h"
-#include "MissionModes.h"
-#include "uavLogger.h"
+#include "../uavOperator/uavUserOperator.h"
+#include "../uavFactory/uavFactory.h"
+#include "../uavController/SupplyController.h"
+#include "../uavController/ReconController.h"
+#include "../uavController/CombatController.h"
+#include "../uavController/MissionModes.h"
+#include "../uavLogger/uavLogger.h"
 
 uavUserOperator::uavUserOperator( uavFactory* uav_factory )
 {

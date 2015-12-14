@@ -6,7 +6,7 @@
  */
 
 #include "uavFactoryImpl.h"
-#include "automaticDutiesProvider.h"
+#include "../uavController/automaticDutiesProvider.h"
 
 uavFactoryImpl::uavFactoryImpl()
 {
